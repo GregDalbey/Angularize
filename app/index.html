@@ -9,21 +9,70 @@
   <title>My AngularJS App</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
   <link rel="stylesheet" href="app.css">
+  
+	  <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+
+	
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
+	
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
 
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+      
+    </nav>
 
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Hello, Angular!</h1>
+        <p>This is a test site for me to learn a little bit about Angular JS.  The code for this thing can be found at <a href="https://github.com/GregDalbey/Angularize">https://github.com/GregDalbey/Angularize</a></p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Check It Out &raquo;</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>JSON Placeholder</h2>
+          <p>In this example I load data in from from http://jsonplaceholder.typicode.com/y. </p>
+          <p><a class="btn btn-default" href="#/jsonprovider" role="button">Check It Out &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>JSON Placeholder</h2>
+          <p>In this example I load data in from from http://jsonplaceholder.typicode.com/y. </p>
+          <p><a class="btn btn-default" href="#/JSonProvider" role="button">Check It Out &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>JSON Placeholder</h2>
+          <p>In this example I load data in from from http://jsonplaceholder.typicode.com/y. </p>
+          <p><a class="btn btn-default" href="#/JSonProvider" role="button">Check It Out &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; Greg Dalbey 2015</p>
+      </footer>
+    </div> <!-- /container -->
+	
+	
   <div ng-view></div>
 
   <div>Angular seed app: v<span app-version></span></div>
@@ -36,6 +85,7 @@
   <script src="app.js"></script>
   <script src="view1/view1.js"></script>
   <script src="view2/view2.js"></script>
+  <script src="jsonProvider/JsonProvider.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
