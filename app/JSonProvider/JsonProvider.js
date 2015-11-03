@@ -12,10 +12,21 @@ angular.module('myApp.jsonProvider', ['ngRoute'])
 .controller('JsonProviderCtrl', ['$timeout', function($timeout) {
 	var vm = this;
 	vm.users = [];
+	vm.userIsSelected = false;
+	vm.selectedUser = null;
 	
 	vm.init = function() {
 		vm.getUsers();
-	}
+	};
+	
+	vm.selectedUserChanged = function(user) {
+		$timeout(function() {
+			if (vm.selectedUser != null) 
+				vm.userIsSelected = true;
+			  else
+				vm.userIsSelected = false;
+		});
+	};
 	
 	vm.getUsers = function getUsers() {		
 		var root = 'http://jsonplaceholder.typicode.com';
@@ -27,8 +38,6 @@ angular.module('myApp.jsonProvider', ['ngRoute'])
 			$timeout(function() {
 				vm.users = data;
 			})
-		  
-		//  alert('dfdf');
 		});
 
 	};

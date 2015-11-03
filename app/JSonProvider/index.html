@@ -1,8 +1,34 @@
 
-Repeater Test
-
 <div ng-controller="JsonProviderCtrl as jpc" ng-init="jpc.init()" >
-<ul>
-	<li ng-repeat="user in jpc.users">{{user.username}}</li>
-</ul>	
+	<div class="col-md-4">
+
+		<span style="font-weight:bold;display:block;">Pick a user ..</span>
+		<select name="selectedUser" id="selectedUser" 
+			ng-model="jpc.selectedUser" 
+			ng-change="jpc.selectedUserChanged()"
+			ng-option="user.username for user in jpc.users">
+			
+			
+		</select>
+	</div>
+	
+	<div class="col-md-4">	
+		<div id="selectedUserPanel" ng-show="jpc.userIsSelected">
+			Show info about User ..
+			<table>
+			<tr>
+				<td>id:</td>
+				<td><span ng-bind="jpc.selectedUser"></span></td>
+
+				<td>username:</td>
+				<td><span ng-bind="jpc.selectedUser.username"></span></td>
+			
+				<td>email:</td>
+				<td><span ng-bind="jpc.selectedUser.email"></span></td>
+			</tr>
+			</table>	
+			
+		</div>
+	</div>
+
 </div>
